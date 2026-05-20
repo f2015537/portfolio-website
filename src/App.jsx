@@ -152,9 +152,9 @@ function LayerTag({ label }) {
         fontFamily: "'JetBrains Mono', monospace",
         fontSize: 10,
         letterSpacing: "0.1em",
-        color: "#1e3a5f",
+        color: "#3a6490",
         padding: "2px 8px",
-        border: "0.5px solid #1e3a5f",
+        border: "0.5px solid #3a6490",
         borderRadius: 3,
       }}
     >
@@ -233,7 +233,7 @@ function ProjectCard({ project }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        border: `0.5px solid ${hovered ? "#2a6496" : "#1a2535"}`,
+        border: `0.5px solid ${hovered ? "#4a80b0" : "#1a2535"}`,
         borderRadius: 8,
         padding: "32px 36px",
         background: hovered ? "rgba(26,35,53,0.7)" : "rgba(14,17,23,0.5)",
@@ -280,7 +280,7 @@ function ProjectCard({ project }) {
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: 11,
-            color: "#2a6496",
+            color: "#4a80b0",
             letterSpacing: "0.08em",
           }}
         >
@@ -305,12 +305,12 @@ function ProjectCard({ project }) {
               display: "flex",
               gap: 10,
               fontSize: 13,
-              color: "#6a7d8f",
+              color: "#8095a8",
               lineHeight: 1.65,
               marginBottom: 8,
             }}
           >
-            <span style={{ color: "#2a6496", flexShrink: 0, marginTop: 1 }}>
+            <span style={{ color: "#4a80b0", flexShrink: 0, marginTop: 1 }}>
               →
             </span>
             <span>{b}</span>
@@ -375,7 +375,7 @@ function BlogCard({ post }) {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
-          border: `0.5px solid ${hovered ? "#2a6496" : "#1a2535"}`,
+          border: `0.5px solid ${hovered ? "#4a80b0" : "#1a2535"}`,
           borderRadius: 8,
           padding: "28px 32px",
           background: hovered ? "rgba(26,35,53,0.7)" : "rgba(14,17,23,0.5)",
@@ -392,7 +392,7 @@ function BlogCard({ post }) {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: 11,
-              color: "#2a6496",
+              color: "#4a80b0",
               margin: "0 0 8px",
               letterSpacing: "0.08em",
             }}
@@ -416,7 +416,7 @@ function BlogCard({ post }) {
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: 12,
-            color: hovered ? "#4a9ede" : "#2a6496",
+            color: hovered ? "#4a9ede" : "#4a80b0",
             transition: "color 0.2s",
             flexShrink: 0,
           }}
@@ -484,7 +484,7 @@ export default function App() {
         html { scroll-behavior: smooth; }
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: #0a0e15; }
-        ::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb { background: #3a6490; border-radius: 2px; }
         a { color: inherit; }
         ::selection { background: rgba(74,158,222,0.25); }
         .nav-links { display: flex; }
@@ -523,7 +523,7 @@ export default function App() {
             color: "#4a9ede",
           }}
         >
-          divyampatro<span style={{ color: "#2a6496" }}>.dev</span>
+          divyampatro<span style={{ color: "#4a80b0" }}>.dev</span>
         </span>
 
         {/* Desktop nav */}
@@ -539,7 +539,7 @@ export default function App() {
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: 12,
                 letterSpacing: "0.08em",
-                color: activeSection === link ? "#4a9ede" : "#3d5066",
+                color: activeSection === link ? "#4a9ede" : "#607d96",
                 transition: "color 0.2s",
                 padding: "4px 0",
                 borderBottom:
@@ -561,13 +561,13 @@ export default function App() {
               letterSpacing: "0.08em",
               padding: "5px 14px",
               borderRadius: 4,
-              border: "0.5px solid #2a6496",
+              border: "0.5px solid #4a80b0",
               color: "#4a9ede",
               textDecoration: "none",
               transition: "border-color 0.2s",
             }}
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#4a9ede"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#2a6496"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#4a80b0"; }}
           >
             Resume ↗
           </a>
@@ -631,7 +631,7 @@ export default function App() {
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: 14,
                 letterSpacing: "0.08em",
-                color: activeSection === link ? "#4a9ede" : "#6a7d8f",
+                color: activeSection === link ? "#4a9ede" : "#8095a8",
                 padding: "12px 0",
                 textAlign: "left",
                 borderBottom: "0.5px solid #1a2535",
@@ -693,7 +693,7 @@ export default function App() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: 13,
-              color: "#2a6496",
+              color: "#4a80b0",
               letterSpacing: "0.1em",
               marginBottom: 16,
               textTransform: "uppercase",
@@ -733,7 +733,7 @@ export default function App() {
           <p
             style={{
               fontSize: 15,
-              color: "#6a7d8f",
+              color: "#8095a8",
               lineHeight: 1.8,
               maxWidth: 560,
               marginBottom: 48,
@@ -776,7 +776,7 @@ export default function App() {
                 padding: "12px 28px",
                 borderRadius: 4,
                 background: "transparent",
-                border: "0.5px solid #2a6496",
+                border: "0.5px solid #4a80b0",
                 color: "#4a9ede",
                 textDecoration: "none",
                 transition: "border-color 0.2s, color 0.2s",
@@ -786,7 +786,7 @@ export default function App() {
                 e.currentTarget.style.borderColor = "#4a9ede";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#2a6496";
+                e.currentTarget.style.borderColor = "#4a80b0";
               }}
             >
               Read the Blog
@@ -803,7 +803,7 @@ export default function App() {
                 padding: "12px 28px",
                 borderRadius: 4,
                 background: "transparent",
-                border: "0.5px solid #2a6496",
+                border: "0.5px solid #4a80b0",
                 color: "#4a9ede",
                 textDecoration: "none",
                 transition: "border-color 0.2s, color 0.2s",
@@ -813,7 +813,7 @@ export default function App() {
                 e.currentTarget.style.borderColor = "#4a9ede";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#2a6496";
+                e.currentTarget.style.borderColor = "#4a80b0";
               }}
             >
               Resume ↗
@@ -834,7 +834,7 @@ export default function App() {
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: 12,
-            color: "#2a6496",
+            color: "#4a80b0",
             marginTop: 32,
             letterSpacing: "0.06em",
           }}
@@ -911,7 +911,7 @@ export default function App() {
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: 11,
-                  color: "#2a6496",
+                  color: "#4a80b0",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
                   marginBottom: 14,
@@ -926,7 +926,7 @@ export default function App() {
                     style={{
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: 12,
-                      color: "#6a7d8f",
+                      color: "#8095a8",
                       background: "rgba(26,35,53,0.6)",
                       border: "0.5px solid #1a2535",
                       borderRadius: 3,
@@ -949,7 +949,7 @@ export default function App() {
           <p
             style={{
               fontSize: 15,
-              color: "#6a7d8f",
+              color: "#8095a8",
               lineHeight: 1.8,
               marginBottom: 40,
             }}
@@ -995,7 +995,7 @@ export default function App() {
                     style={{
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: 11,
-                      color: "#2a6496",
+                      color: "#4a80b0",
                       letterSpacing: "0.1em",
                       display: "block",
                       marginBottom: 8,
@@ -1023,7 +1023,7 @@ export default function App() {
                       outline: "none",
                       transition: "border-color 0.2s",
                     }}
-                    onFocus={(e) => (e.target.style.borderColor = "#2a6496")}
+                    onFocus={(e) => (e.target.style.borderColor = "#4a80b0")}
                     onBlur={(e) => (e.target.style.borderColor = "#1a2535")}
                   />
                 </div>
@@ -1033,7 +1033,7 @@ export default function App() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: 11,
-                    color: "#2a6496",
+                    color: "#4a80b0",
                     letterSpacing: "0.1em",
                     display: "block",
                     marginBottom: 8,
@@ -1062,7 +1062,7 @@ export default function App() {
                     resize: "vertical",
                     transition: "border-color 0.2s",
                   }}
-                  onFocus={(e) => (e.target.style.borderColor = "#2a6496")}
+                  onFocus={(e) => (e.target.style.borderColor = "#4a80b0")}
                   onBlur={(e) => (e.target.style.borderColor = "#1a2535")}
                 />
               </div>
@@ -1183,7 +1183,7 @@ export default function App() {
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: 12,
-            color: "#1e3a5f",
+            color: "#3a6490",
             letterSpacing: "0.06em",
           }}
         >
@@ -1193,11 +1193,11 @@ export default function App() {
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: 12,
-            color: "#1e3a5f",
+            color: "#3a6490",
             letterSpacing: "0.06em",
           }}
         >
-          Built with React · Hosted on your domain
+          Built with React · divyampatro.dev
         </span>
       </footer>
     </div>

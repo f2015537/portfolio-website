@@ -1140,6 +1140,7 @@ export default function App() {
           >
             {[
               { label: "GitHub", url: "https://github.com/f2015537" },
+              { label: "LinkedIn", url: "https://www.linkedin.com/in/divyampatro/" },
               { label: "Blog", url: "https://blog.divyampatro.dev" },
               { label: "Resume", url: RESUME_URL },
             ].map(({ label, url }) => (

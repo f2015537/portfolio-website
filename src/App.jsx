@@ -523,7 +523,7 @@ export default function App() {
             color: "#4a9ede",
           }}
         >
-          dp<span style={{ color: "#2a6496" }}>.dev</span>
+          divyampatro<span style={{ color: "#2a6496" }}>.dev</span>
         </span>
 
         {/* Desktop nav */}

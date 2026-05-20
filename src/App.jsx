@@ -438,6 +438,7 @@ export default function App() {
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -462,6 +463,7 @@ export default function App() {
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false);
   };
 
   return (
@@ -485,6 +487,12 @@ export default function App() {
         ::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 2px; }
         a { color: inherit; }
         ::selection { background: rgba(74,158,222,0.25); }
+        .nav-links { display: flex; }
+        .nav-hamburger { display: none; }
+        @media (max-width: 640px) {
+          .nav-links { display: none; }
+          .nav-hamburger { display: flex; }
+        }
       `}</style>
 
       <GridBg />
@@ -518,7 +526,8 @@ export default function App() {
           dp<span style={{ color: "#2a6496" }}>.dev</span>
         </span>
 
-        <div style={{ display: "flex", gap: 32, alignItems: "center" }}>
+        {/* Desktop nav */}
+        <div className="nav-links" style={{ gap: 32, alignItems: "center" }}>
           {NAV_LINKS.map((link) => (
             <button
               key={link}
@@ -557,17 +566,99 @@ export default function App() {
               textDecoration: "none",
               transition: "border-color 0.2s",
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#4a9ede";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#2a6496";
+            onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#4a9ede"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#2a6496"; }}
+          >
+            Resume ↗
+          </a>
+        </div>
+
+        {/* Hamburger */}
+        <button
+          className="nav-hamburger"
+          onClick={() => setMenuOpen((o) => !o)}
+          style={{
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            display: "flex",
+            flexDirection: "column",
+            gap: 5,
+            padding: 4,
+          }}
+        >
+          {menuOpen ? (
+            <>
+              <span style={{ width: 22, height: 1.5, background: "#4a9ede", transform: "rotate(45deg) translate(4.5px, 4.5px)", display: "block" }} />
+              <span style={{ width: 22, height: 1.5, background: "#4a9ede", transform: "rotate(-45deg) translate(4.5px, -4.5px)", display: "block" }} />
+            </>
+          ) : (
+            <>
+              <span style={{ width: 22, height: 1.5, background: "#4a9ede", display: "block" }} />
+              <span style={{ width: 22, height: 1.5, background: "#4a9ede", display: "block" }} />
+              <span style={{ width: 22, height: 1.5, background: "#4a9ede", display: "block" }} />
+            </>
+          )}
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div
+          style={{
+            position: "fixed",
+            top: 60,
+            left: 0,
+            right: 0,
+            zIndex: 99,
+            background: "rgba(10,14,21,0.97)",
+            backdropFilter: "blur(12px)",
+            borderBottom: "0.5px solid #1a2535",
+            display: "flex",
+            flexDirection: "column",
+            padding: "16px 32px 24px",
+            gap: 4,
+          }}
+        >
+          {NAV_LINKS.map((link) => (
+            <button
+              key={link}
+              onClick={() => scrollTo(link)}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: 14,
+                letterSpacing: "0.08em",
+                color: activeSection === link ? "#4a9ede" : "#6a7d8f",
+                padding: "12px 0",
+                textAlign: "left",
+                borderBottom: "0.5px solid #1a2535",
+              }}
+            >
+              {link}
+            </button>
+          ))}
+          <a
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: 14,
+              letterSpacing: "0.08em",
+              color: "#4a9ede",
+              textDecoration: "none",
+              padding: "12px 0",
+              marginTop: 4,
             }}
           >
             Resume ↗
           </a>
         </div>
-      </nav>
+      )}
 
       {/* HERO */}
       <section

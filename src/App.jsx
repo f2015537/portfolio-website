@@ -865,7 +865,7 @@ export default function App() {
             marginBottom: 32,
           }}
         >
-          {BLOG_POSTS.map((p) => (
+          {BLOG_POSTS.slice(0, 3).map((p) => (
             <BlogCard key={p.title} post={p} />
           ))}
         </div>

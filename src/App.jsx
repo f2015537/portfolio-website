@@ -22,6 +22,7 @@ const PROJECTS = [
     ],
     github: "https://github.com/f2015537/space-finder",
     demo: "https://d24kqex7dx8ru7.cloudfront.net",
+    blog: "https://blog.divyampatro.dev/building-a-serverless-full-stack-app-on-aws-with-cdk-architecture-decisions-and-tradeoffs",
     stack: [
       "TypeScript",
       "AWS CDK",
@@ -382,6 +383,24 @@ function ProjectCard({ project }) {
             }}
           >
             {project.demoLabel ?? "Live Demo"} →
+          </a>
+        )}
+        {project.blog && (
+          <a
+            href={project.blog}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: 12,
+              color: "#4a9ede",
+              textDecoration: "none",
+              letterSpacing: "0.06em",
+              borderBottom: "0.5px solid rgba(74,158,222,0.3)",
+              paddingBottom: 1,
+            }}
+          >
+            Blog Post →
           </a>
         )}
       </div>

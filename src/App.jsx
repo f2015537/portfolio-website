@@ -52,6 +52,13 @@ const PROJECTS = [
 const BLOG_POSTS = [
   {
     title:
+      "Bridging Google ADK and MCP: Building Framework-Agnostic AI Tools",
+    tag: "AI Agents · Google ADK · MCP",
+    date: "2026",
+    url: "https://blog.divyampatro.dev/bridging-google-adk-and-mcp-building-framework-agnostic-ai-tools",
+  },
+  {
+    title:
       "Building a Serverless Full-Stack App on AWS with CDK: Architecture Decisions and Tradeoffs",
     tag: "AWS · CDK · Serverless",
     date: "2026",
@@ -61,15 +68,19 @@ const BLOG_POSTS = [
 
 const SKILLS = [
   { category: "Frontend", items: ["React", "TypeScript", "Next.js", "Vite"] },
-  { category: "Backend", items: ["Node.js", "Lambda", "API Gateway", "REST"] },
+  { category: "Backend", items: ["Python", "Node.js", "Lambda", "API Gateway", "REST"] },
   {
     category: "Cloud",
     items: ["AWS CDK", "DynamoDB", "S3", "Cognito", "CloudFront", "SNS", "SES"],
   },
+  {
+    category: "AI Agents",
+    items: ["Google ADK", "MCP", "LiteLLM", "LLM Orchestration"],
+  },
   { category: "Tooling", items: ["Git", "GitHub", "Jest", "ESLint"] },
   {
     category: "Concepts",
-    items: ["System Design", "Serverless", "Multi-tenancy", "IaC"],
+    items: ["System Design", "Serverless", "Agentic AI", "Multi-tenancy", "IaC"],
   },
   {
     category: "Writing",

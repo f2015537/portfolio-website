@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 
 const NAV_LINKS = ["About", "Projects", "Blog", "Skills", "Contact"];
 
-const RESUME_URL = "/resume.pdf"; // ← replace with your hosted PDF URL
+const RESUME_URL = "/Divyam_Resume.pdf";
 
 const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;

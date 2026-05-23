@@ -32,6 +32,21 @@ const PROJECTS = [
       "CloudFront",
     ],
   },
+  {
+    name: "ADK × MCP Bridge",
+    tag: "AI Agents · Google ADK · MCP",
+    description:
+      "Framework-agnostic AI tool layer that wraps Google ADK FunctionTools in a custom MCP server, exposing them to any MCP-compatible client — including Claude Code. Demonstrates a full ADK ↔ MCP integration loop with runtime tool discovery.",
+    bullets: [
+      "ADK tools exposed over stdio MCP transport — any MCP client (Claude Code, other agents) can consume them without rewriting",
+      "LiteLLM abstraction layer lets you swap the underlying LLM (Claude, Gemini) without touching agent logic",
+      "Agent auto-discovers available tools at runtime via McpToolset — no static enumeration needed",
+    ],
+    github: "https://github.com/f2015537/building-agents-with-google-adk",
+    demo: "https://blog.divyampatro.dev/bridging-google-adk-and-mcp-building-framework-agnostic-ai-tools",
+    demoLabel: "Blog Post",
+    stack: ["Python", "Google ADK", "MCP", "LiteLLM", "Claude Sonnet"],
+  },
 ];
 
 const BLOG_POSTS = [
@@ -340,22 +355,24 @@ function ProjectCard({ project }) {
         >
           GitHub →
         </a>
-        <a
-          href={project.demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            fontFamily: "'JetBrains Mono', monospace",
-            fontSize: 12,
-            color: "#4a9ede",
-            textDecoration: "none",
-            letterSpacing: "0.06em",
-            borderBottom: "0.5px solid rgba(74,158,222,0.3)",
-            paddingBottom: 1,
-          }}
-        >
-          Live Demo →
-        </a>
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: 12,
+              color: "#4a9ede",
+              textDecoration: "none",
+              letterSpacing: "0.06em",
+              borderBottom: "0.5px solid rgba(74,158,222,0.3)",
+              paddingBottom: 1,
+            }}
+          >
+            {project.demoLabel ?? "Live Demo"} →
+          </a>
+        )}
       </div>
     </div>
   );

@@ -11,6 +11,36 @@ const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const PROJECTS = [
   {
+    name: "Iterative Portrait Agent",
+    tag: "AI Agents · Google ADK · Gemini",
+    description:
+      "Multi-agent pipeline that generates AI portraits and refines them through self-critique, looping until every visual attribute matches the description or the iteration limit is hit.",
+    bullets: [
+      "Per-attribute critique — each visual detail (hair, iris, necklace) verified individually, catching spatial failures a holistic pass/fail score would miss",
+      "Image bytes never enter session state — generate_image saves PNGs to disk and returns paths, keeping JSON state clean",
+      "Early exit via exit_loop when image passes — skips remaining iterations and saves API costs",
+    ],
+    github: "https://github.com/f2015537/iterative-portrait-agent",
+    demo: "https://blog.divyampatro.dev/the-necklace-that-failed-five-times-building-a-self-critiquing-multi-agent-portrait-pipeline",
+    demoLabel: "Blog Post",
+    stack: ["Python", "Google ADK", "Gemini API"],
+  },
+  {
+    name: "ADK × MCP Bridge",
+    tag: "AI Agents · Google ADK · MCP",
+    description:
+      "Framework-agnostic AI tool layer that wraps Google ADK FunctionTools in a custom MCP server, exposing them to any MCP-compatible client — including Claude Code. Demonstrates a full ADK ↔ MCP integration loop with runtime tool discovery.",
+    bullets: [
+      "ADK tools exposed over stdio MCP transport — any MCP client (Claude Code, other agents) can consume them without rewriting",
+      "LiteLLM abstraction layer lets you swap the underlying LLM (Claude, Gemini) without touching agent logic",
+      "Agent auto-discovers available tools at runtime via McpToolset — no static enumeration needed",
+    ],
+    github: "https://github.com/f2015537/building-agents-with-google-adk",
+    demo: "https://blog.divyampatro.dev/bridging-google-adk-and-mcp-building-framework-agnostic-ai-tools",
+    demoLabel: "Blog Post",
+    stack: ["Python", "Google ADK", "MCP", "LiteLLM", "Claude Sonnet"],
+  },
+  {
     name: "Space Finder",
     tag: "Full-stack · AWS · CDK",
     description:
@@ -32,36 +62,6 @@ const PROJECTS = [
       "Cognito",
       "CloudFront",
     ],
-  },
-  {
-    name: "ADK × MCP Bridge",
-    tag: "AI Agents · Google ADK · MCP",
-    description:
-      "Framework-agnostic AI tool layer that wraps Google ADK FunctionTools in a custom MCP server, exposing them to any MCP-compatible client — including Claude Code. Demonstrates a full ADK ↔ MCP integration loop with runtime tool discovery.",
-    bullets: [
-      "ADK tools exposed over stdio MCP transport — any MCP client (Claude Code, other agents) can consume them without rewriting",
-      "LiteLLM abstraction layer lets you swap the underlying LLM (Claude, Gemini) without touching agent logic",
-      "Agent auto-discovers available tools at runtime via McpToolset — no static enumeration needed",
-    ],
-    github: "https://github.com/f2015537/building-agents-with-google-adk",
-    demo: "https://blog.divyampatro.dev/bridging-google-adk-and-mcp-building-framework-agnostic-ai-tools",
-    demoLabel: "Blog Post",
-    stack: ["Python", "Google ADK", "MCP", "LiteLLM", "Claude Sonnet"],
-  },
-  {
-    name: "Iterative Portrait Agent",
-    tag: "AI Agents · Google ADK · Gemini",
-    description:
-      "Multi-agent pipeline that generates AI portraits and refines them through self-critique, looping until every visual attribute matches the description or the iteration limit is hit.",
-    bullets: [
-      "Per-attribute critique — each visual detail (hair, iris, necklace) verified individually, catching spatial failures a holistic pass/fail score would miss",
-      "Image bytes never enter session state — generate_image saves PNGs to disk and returns paths, keeping JSON state clean",
-      "Early exit via exit_loop when image passes — skips remaining iterations and saves API costs",
-    ],
-    github: "https://github.com/f2015537/iterative-portrait-agent",
-    demo: "https://blog.divyampatro.dev/the-necklace-that-failed-five-times-building-a-self-critiquing-multi-agent-portrait-pipeline",
-    demoLabel: "Blog Post",
-    stack: ["Python", "Google ADK", "Gemini API"],
   },
 ];
 

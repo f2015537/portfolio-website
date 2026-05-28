@@ -48,9 +48,31 @@ const PROJECTS = [
     demoLabel: "Blog Post",
     stack: ["Python", "Google ADK", "MCP", "LiteLLM", "Claude Sonnet"],
   },
+  {
+    name: "Iterative Portrait Agent",
+    tag: "AI Agents · Google ADK · Gemini",
+    description:
+      "Multi-agent pipeline that generates AI portraits and refines them through self-critique, looping until every visual attribute matches the description or the iteration limit is hit.",
+    bullets: [
+      "Per-attribute critique — each visual detail (hair, iris, necklace) verified individually, catching spatial failures a holistic pass/fail score would miss",
+      "Image bytes never enter session state — generate_image saves PNGs to disk and returns paths, keeping JSON state clean",
+      "Early exit via exit_loop when image passes — skips remaining iterations and saves API costs",
+    ],
+    github: "https://github.com/f2015537/iterative-portrait-agent",
+    demo: "https://blog.divyampatro.dev/the-necklace-that-failed-five-times-building-a-self-critiquing-multi-agent-portrait-pipeline",
+    demoLabel: "Blog Post",
+    stack: ["Python", "Google ADK", "Gemini API"],
+  },
 ];
 
 const BLOG_POSTS = [
+  {
+    title:
+      "The Necklace That Failed Five Times: Building a Self-Critiquing Multi-Agent Portrait Pipeline",
+    tag: "AI Agents · Google ADK · Gemini",
+    date: "2026",
+    url: "https://blog.divyampatro.dev/the-necklace-that-failed-five-times-building-a-self-critiquing-multi-agent-portrait-pipeline",
+  },
   {
     title:
       "Bridging Google ADK and MCP: Building Framework-Agnostic AI Tools",
@@ -76,7 +98,7 @@ const SKILLS = [
   },
   {
     category: "AI Agents",
-    items: ["Google ADK", "MCP", "LiteLLM", "LLM Orchestration"],
+    items: ["Google ADK", "Gemini API", "MCP", "LiteLLM", "LLM Orchestration", "Multimodal AI"],
   },
   { category: "Tooling", items: ["Git", "GitHub", "Jest", "ESLint"] },
   {

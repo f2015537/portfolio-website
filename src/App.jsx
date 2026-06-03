@@ -1023,9 +1023,9 @@ export default function App() {
             }}
           >
             Available for fullstack engineering roles and consulting engagements
-            — remote worldwide, or on-site in India and the US. If you want
-            someone who thinks deeply about architecture and writes clearly
-            about it, let's talk.
+            — remote worldwide, or on-site in India. If you want someone who
+            thinks deeply about architecture and writes clearly about it, let's
+            talk.
           </p>
 
           {sent ? (

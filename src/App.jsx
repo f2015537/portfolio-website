@@ -11,6 +11,21 @@ const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const PROJECTS = [
   {
+    name: "Washington Hikes RAG Chatbot",
+    tag: "RAG · LangChain · Gemini",
+    description:
+      "Retrieval-augmented generation chatbot that answers natural language questions about Washington hiking trails — difficulty, elevation, permits, and conditions — from a web-scraped 640-document knowledge base.",
+    bullets: [
+      "Decoupled ingestion and inference stages — trail data refreshes by re-running the pipeline, no model redeployment needed",
+      "Local Chroma vector store with persistent storage — identical retrieval API to hosted DBs, zero infrastructure overhead",
+      "1000-char chunks with 150-char overlap — prevents context loss while staying within token budgets at boundaries",
+    ],
+    github: "https://github.com/f2015537/RAG-Chatbot",
+    demo: "https://blog.divyampatro.dev/building-a-rag-chatbot-every-design-decision-explained",
+    demoLabel: "Blog Post",
+    stack: ["Python", "Google ADK", "Gemini API", "LangChain", "Chroma", "OpenAI Embeddings"],
+  },
+  {
     name: "Iterative Portrait Agent",
     tag: "AI Agents · Google ADK · Gemini",
     description:
@@ -67,6 +82,12 @@ const PROJECTS = [
 
 const BLOG_POSTS = [
   {
+    title: "Building a RAG Chatbot: Every Design Decision Explained",
+    tag: "RAG · LangChain · Gemini",
+    date: "2026",
+    url: "https://blog.divyampatro.dev/building-a-rag-chatbot-every-design-decision-explained",
+  },
+  {
     title:
       "The Necklace That Failed Five Times: Building a Self-Critiquing Multi-Agent Portrait Pipeline",
     tag: "AI Agents · Google ADK · Gemini",
@@ -98,7 +119,7 @@ const SKILLS = [
   },
   {
     category: "AI Agents",
-    items: ["Google ADK", "Gemini API", "MCP", "LiteLLM", "LLM Orchestration", "Multimodal AI"],
+    items: ["Google ADK", "Gemini API", "MCP", "LiteLLM", "LLM Orchestration", "Multimodal AI", "RAG", "LangChain", "Chroma"],
   },
   { category: "Tooling", items: ["Git", "GitHub", "Jest", "ESLint"] },
   {

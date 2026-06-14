@@ -11,6 +11,21 @@ const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const PROJECTS = [
   {
+    name: "Agentic RAG Case Study",
+    tag: "RAG · LangChain · Retrieval Evaluation",
+    description:
+      "Empirical comparison of four RAG strategies against the same Python codebase, showing that chunking strategy outweighs retrieval method for code Q&A quality.",
+    bullets: [
+      "AST-based chunking won or tied on every query — preserving functions and classes with their docstrings beats character-based splitting",
+      "Compared semantic (char vs. AST chunking), BM25 lexical, and hybrid RRF retrieval across queries targeting docstrings, vocabulary gaps, and exact identifiers",
+      "Retrieval quality measured with recall, precision, MRR, and nDCG rather than eyeballing answers",
+    ],
+    github: "https://github.com/f2015537/agentic-rag-case-study",
+    demo: "https://blog.divyampatro.dev/chunking-vs-retrieval-a-rag-case-study-on-a-real-codebase",
+    demoLabel: "Blog Post",
+    stack: ["Python", "LangChain", "OpenAI Embeddings", "Chroma", "BM25", "AST"],
+  },
+  {
     name: "Washington Hikes RAG Chatbot",
     tag: "RAG · LangChain · Gemini",
     description:
@@ -82,6 +97,12 @@ const PROJECTS = [
 
 const BLOG_POSTS = [
   {
+    title: "Chunking vs Retrieval: A RAG Case Study on a Real Codebase",
+    tag: "RAG · LangChain · Retrieval Evaluation",
+    date: "2026",
+    url: "https://blog.divyampatro.dev/chunking-vs-retrieval-a-rag-case-study-on-a-real-codebase",
+  },
+  {
     title: "Building a RAG Chatbot: Every Design Decision Explained",
     tag: "RAG · LangChain · Gemini",
     date: "2026",
@@ -119,7 +140,7 @@ const SKILLS = [
   },
   {
     category: "AI Agents",
-    items: ["Google ADK", "Gemini API", "MCP", "LiteLLM", "LLM Orchestration", "Multimodal AI", "RAG", "LangChain", "Chroma"],
+    items: ["Google ADK", "Gemini API", "MCP", "LiteLLM", "LLM Orchestration", "Multimodal AI", "RAG", "LangChain", "Chroma", "BM25", "Hybrid Retrieval"],
   },
   { category: "Tooling", items: ["Git", "GitHub", "Jest", "ESLint"] },
   {
